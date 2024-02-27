@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct HomeModel: Codable {
+    let albumId, id: Int
+    let title: String
+    let url, thumbnailUrl: String
+}
+
+typealias HomeData = [HomeModel]

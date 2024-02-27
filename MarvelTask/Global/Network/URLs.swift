@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct URLs {
+    static let baseUrl = "https://jsonplaceholder.typicode.com/"
+
+    static let home = baseUrl + "photos"
+}

@@ -8,5 +8,15 @@
 import Foundation
 
 class HomeAPI: BaseAPI<HomeNetworks> {
-    func getHomeData(completion: @escaping(Result<NewsBannerModel?, NSError>) -> Void)
+    func getHomeData(completion: @escaping(Result<HomeData?, NSError>) -> Void) {
+        self.fetchData(target: .getHomeData, responseType: HomeData.self) { result in
+            completion(result)
+        }
+    }
+
+    func getHomeDateiles(id: String, completion: @escaping(Result<HomeData?, NSError>) -> Void) {
+        self.fetchData(target: .getHomeDetails(id: id), responseType: HomeData.self) { result in
+            completion(result)
+        }
+    }
 }

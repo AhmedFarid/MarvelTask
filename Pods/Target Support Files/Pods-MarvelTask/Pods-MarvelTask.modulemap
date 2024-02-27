@@ -1,0 +1,6 @@
+framework module Pods_MarvelTask {
+  umbrella header "Pods-MarvelTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
